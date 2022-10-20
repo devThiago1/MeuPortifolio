@@ -71,8 +71,7 @@ body{
     color:  #05F2AF;
     font-family: 'Roboto Mono', monospace;
     font-size: 30px;
-}
- 
+
 .about_link{
     display: flex;
     justify-content: flex-start;
@@ -88,3 +87,9 @@ body{
     color: #05F2AF;
     background-color: #0E1626;
 }
+
+.about_link:hover{
+    color: #05F2AF;
+    background-color: #0E1626;
+}
+
