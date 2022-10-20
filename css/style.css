@@ -76,14 +76,14 @@ body{
     display: flex;
     justify-content: flex-start;
     font-family: 'Roboto Mono', monospace;
-    margin-top: 50px;
-    border-radius: 15px;
-    font-size: 25px;
+    margin-top: 65px;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 20px;
     background-color: #05F2AF;
 }
 
 .about_link:hover{
-    transition:step-start;
     color: #05F2AF;
     background-color: #0E1626;
 }
