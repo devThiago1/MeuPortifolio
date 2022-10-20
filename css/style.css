@@ -66,8 +66,24 @@ body{
 
 
 #apresentacao #about-description{
-    margin: 2% 30%;
-    color: #014040;
+    margin: 5% 20%;
+    color:  #05F2AF;
     font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
 
+.about_link{
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 50px;
+    border-radius: 15px;
+    font-size: 25px;
+    background-color: #05F2AF;
+}
+
+.about_link:hover{
+    transition:step-start;
+    color: #05F2AF;
+    background-color: #0E1626;
 }
