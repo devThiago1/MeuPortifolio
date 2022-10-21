@@ -5,15 +5,20 @@
 #05F2AF
 #0DD99F
 #0E1626
+#677D76
 */
  
 /* FONTES:
 font-family: 'Roboto', sans-serif;
 font-family: 'Signika Negative', sans-serif;
+font-family: 'Roboto Mono', monospace;
 */
  
 /*TAGS*/
- 
+a{
+    text-decoration: none;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +28,12 @@ font-family: 'Signika Negative', sans-serif;
 body{
     background-color: #0E1626;
 }
- 
+
+main{
+    padding: 10%;
+}
+
+
  
 /*ID E CLASSES*/
  
@@ -57,33 +67,82 @@ body{
 .navbar a:hover{
     color: #1F3140;
 }
+
+
  
-.container #apresentacao{
+.description #apresentacao{
     display: flex;
     justify-content: center;
     align-items: center;
 }
  
  
-#apresentacao #about-description{
-    margin: 5% 20%;
+#apresentacao #generate-description{
+    margin: 5% 15%;
     color:  #05F2AF;
     font-family: 'Roboto Mono', monospace;
-    font-size: 30px;
+    font-size: 35px;
+    transition-duration: 2s;
 }
  
 .about_link{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     font-family: 'Roboto Mono', monospace;
-    margin-top: 65px;
+    margin: 10% 30%;
     border-radius: 25px;
     font-size: 15px;
     padding: 20px;
+    max-width: 40%;
+    color: #0E1626;
     background-color: #05F2AF;
 }
  
 .about_link:hover{
     color: #05F2AF;
-    background-color: #0E1626;
+    background-color: #0E1626;     
+    transition: 300ms linear;
+    border-color: #05F2AF;
+}
+
+#quem_sou{
+    padding: 5%;
+}
+
+#point{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 35px;
+    color: #05F2AF;
+    margin-bottom: 8%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#about .foto_perfil{
+    width:300px;
+    height:300px;
+    border-radius: 20%;
+}
+
+#about p{
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+    color: #05F2AF;
+
+}
+
+#about_me{
+    display: flex;
+    justify-content: space-between;
+}
+
+#about_me #about_description{
+    font-family: 'Roboto Mono', monospace;
+    color: #677D76;
+    margin-left: 10%;
+}
+
+#about_me #about_description span{
+    font-size: 30px;
 }
