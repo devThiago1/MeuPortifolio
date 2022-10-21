@@ -107,6 +107,7 @@ main{
 
 #quem_sou{
     padding: 5%;
+    transition-duration: 5ms;
 }
 
 #point{
@@ -126,10 +127,9 @@ main{
 }
 
 #about p{
-    margin-top: 10px;
+    margin-top: 15px;
     font-family: 'Roboto Mono', monospace;
-    color: #05F2AF;
-
+    color: #677D76;
 }
 
 #about_me{
@@ -143,6 +143,6 @@ main{
     margin-left: 10%;
 }
 
-#about_me #about_description span{
-    font-size: 30px;
+#about span{
+    font-size: 15px;
 }
