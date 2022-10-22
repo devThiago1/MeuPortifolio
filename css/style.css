@@ -33,6 +33,10 @@ main{
     padding: 10%;
 }
 
+aside{
+    float: left;
+    position: fixed;
+}
 
  
 /*ID E CLASSES*/
@@ -68,15 +72,35 @@ main{
     color: #1F3140;
 }
 
+.links img{
+    max-width: 25px;
+    max-height: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+}
 
- 
-.description #apresentacao{
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 120px;
+    margin-right: 40px;
+    margin-left: 60px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 10px;
+    background-color: #05F2AF;
+    border-radius: 50px;
+} 
+
+.description{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
- 
- 
+
+
 #apresentacao #generate-description{
     margin: 5% 15%;
     color:  #05F2AF;
@@ -88,10 +112,11 @@ main{
 .about_link{
     display: flex;
     justify-content: space-around;
-    font-family: 'Roboto Mono', monospace;
-    margin: 10% 30%;
+    margin-top: 13%;
+    margin-left: 30%;
+    margin-right: 30%;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 20px;
     padding: 20px;
     max-width: 40%;
     color: #0E1626;
@@ -105,6 +130,16 @@ main{
     border-color: #05F2AF;
 }
 
+#container-about{
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+#about_me{
+    display: flex;
+    align-items: center;
+}
+
 #quem_sou{
     padding: 5%;
     transition-duration: 5ms;
@@ -113,9 +148,9 @@ main{
 #point{
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 40px;
     color: #05F2AF;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: space-around;
 }
@@ -135,6 +170,7 @@ main{
 #about_me{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #about_me #about_description{
@@ -145,4 +181,9 @@ main{
 
 #about span{
     font-size: 15px;
+}
+
+
+#container-portifolio{
+    margin: 2% 5%;
 }
