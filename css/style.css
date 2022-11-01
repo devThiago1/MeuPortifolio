@@ -36,40 +36,111 @@ main{
 aside{
     float: left;
     position: fixed;
+    margin-top: 10%;
+}
+header{
+    background-color: #014040;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    opacity: 0.7;
 }
 
- 
+section{
+    padding-top: 100px;
+}
+
+footer{
+    text-align: center;
+    padding: 50px 0;
+    font-size: 15px;
+    color:#05F2AF;
+}
+
+
+
 /*ID E CLASSES*/
- 
 #header{
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
- 
+
+
+header.sticky{
+    background: #014040;
+    padding: 2px 0;
+    box-shadow: 2 0 10px rgb(0 0 0 / 20%);
+}
+
 .container{
-    max-width: 1070px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: auto;
 }
  
 .navbar{
     display: flex;
+    justify-content: space-around;
 }
  
 .navbar li{
     list-style: none;
 }
  
-.navbar a{
-    margin: 10px 20px;
-    text-decoration: none;
-    color: #05F2AF;
-    font-family: 'Roboto Mono', monospace;
+.navbar #links a{
+    color: var(--text-color);
+    display: inline-block;
     font-size: 15px;
+    font-weight: 500;
+    padding: 15px 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: #0DD99F;
 }
- 
-.navbar a:hover{
+
+.navbar #links a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -5px;
+    Left: 0;
+    transition: ease .50s;
+}
+
+.navbar #links a:hover{
     color: #1F3140;
+    width: 100%;
+}
+
+.navbar #links a:hover::after {
+    width: 100%;
+}
+
+
+.btn-header{
+    position: relative;
+    display: inline-block;
+    margin-left: 40%;
+    padding: 10px 20px;
+    border: 3px solid ;
+    background-color: #05F2AF;
+    border-radius: 10px;
+    color: #0E1626;
+    letter-spacing: 1px;
+    transition: ease .50s;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.btn-header:hover{
+    color: #05F2AF;
+    background-color: #0E1626;
 }
 
 .links img{
@@ -86,13 +157,14 @@ aside{
     justify-content: space-around;
     flex-direction: column;
     max-width: 120px;
-    margin-right: 40px;
-    margin-left: 60px;
+    max-height: 400px;
+    margin-right: 50px;
+    margin-left: 30px;
     margin-top: 150px;
     margin-bottom: 150px;
-    padding: 10px;
-    background-color: #05F2AF;
-    border-radius: 50px;
+    padding: 5px;
+    background-color: #025949;
+    border-radius: 20px;
 } 
 
 .description{
@@ -100,9 +172,10 @@ aside{
     justify-content: center;
 }
 
-
 #apresentacao #generate-description{
-    margin: 5% 15%;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-right: 20%;
     color:  #05F2AF;
     font-family: 'Roboto Mono', monospace;
     font-size: 35px;
@@ -112,7 +185,7 @@ aside{
 .about_link{
     display: flex;
     justify-content: space-around;
-    margin-top: 13%;
+    margin-top: 10%;
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 25px;
@@ -130,19 +203,20 @@ aside{
     border-color: #05F2AF;
 }
 
+ #frase-about{
+    color:  #05F2AF;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 35px;
+    transition-duration: 2s;
+}
 #container-about{
-    margin-top: 2%;
-    margin-bottom: 15%;
-}
-
-#about_me{
+    padding: 10%;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-#quem_sou{
-    padding: 5%;
-    transition-duration: 5ms;
+    color: #677D76;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 0%;
 }
 
 #point{
@@ -155,28 +229,33 @@ aside{
     justify-content: space-around;
 }
 
+#about{
+    margin-left: 20px;
+    margin-top: 5%;
+}
+
 #about .foto_perfil{
     width:300px;
     height:300px;
     border-radius: 20%;
+    transition-duration: 2s;
 }
 
-#about p{
-    margin-top: 15px;
+#about h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Roboto Mono', monospace;
     color: #677D76;
 }
 
-#about_me{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-#about_me #about_description{
+#about_description{
     font-family: 'Roboto Mono', monospace;
     color: #677D76;
     margin-left: 10%;
+    transition-duration: 2s;
+    padding-top: 20px;
 }
 
 #about span{
@@ -186,4 +265,215 @@ aside{
 
 #container-portifolio{
     margin: 2% 5%;
+}
+
+#services .frase-service{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+    color:  #05F2AF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.services-itens{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.service-item{
+    padding: 40px;
+    transition: ease .50s;
+    cursor: pointer;
+}
+
+.service-item-image img{
+    max-width: 100%;
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.service-item h3{
+    color: #677D76;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-item p{
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    color:#677D76;
+    line-height: 25px;   
+}
+
+.service-item:hover{
+    background: #025949;
+    box-shadow: 20px 0 90px 0 rgb(10 10 70 / 10%);
+    border-radius: 12px;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.80deg) rotateY(10.2deg) scale3d(1.0, 1.0, 1.0);
+}
+
+
+.portfolio-head{
+    text-align: center;
+}
+
+.portfolio-head h3{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #05F2AF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.portfolio-head p{
+    font-size: 15px;
+    color: #05F2AF;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5%;
+    text-align: center;
+    padding: 20%;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.col{
+    position: relative;
+}
+
+.col img{
+    max-width: 100%;
+    width: 450px;
+    height: 300px;
+    padding: 5%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.portfolio-content-text h3{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    color: #677D76;
+    transform: translate(-50%);
+    opacity: 0;
+    left: 50%;
+    transition: all .100s;
+    bottom: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.portfolio-content-text:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+.contact{
+    background: #025949;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    padding: 50px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.contact-text h3{
+    font-size: 25px;
+    color: #0E1626;
+    margin-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contact-text p{
+    font-size: var(--p-font);
+    color: #0E1626;
+    margin-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.form input[type="email"]{
+    max-width: 100%;
+    width: 450px;
+    padding: 20px;
+    background: #0E1626;
+    color: #05F2AF;
+    border: none;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.form input[type="submit"]{
+    padding: 20px;
+    background: #0E1626;
+    color: #05F2AF;
+    border: none;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+
+@media(max-width: 1200px){
+    section{
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: .3s;
+    }
+}
+@media(max-width: 860px){
+    #apresentacao{
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+        grid-gap: 1rem;
+    }
+}
+@media(max-width: 768px){
+    #apresentacao{
+        min-height: 80%;
+    }
+    #header{
+        position: absolute;
+        top: -1000px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        opacity: 0.8;
+        text-align: center;
+        transition: all .50s;
+    }
+    .navbar a{
+        display: block;
+        padding: 0.8rem;
+    }
+    .navbar a:hover{
+        color: #1F3140;
+    }
+    .services-itens{
+        grid-template-columns: 1fr;
+    }
+    .portfolio-content{
+        grid-template-columns: 2fr;
+    }
+    #about_description{
+        align-items:center;
+    }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Thiago Calmon</title>
  
     <!--LINKS-->
     <link rel="stylesheet" href="css/style.css">
@@ -19,15 +19,17 @@
 <body>
     <header>
         <div class="container" id="header">
-            <a href="#index.html">
-                <img src="img/Embed-128.ico" alt="logo" id="brand">
+            <a href="#apresentacao">
+                <img src="img/Embed-128.ico" alt="logo" id="brand" width="80">
             </a>
+            <div id="navbar-icons"></div>
             <nav>
                 <ul class="navbar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#quem_sou">Quem sou</a></li>
-                    <li><a href="#">Portifólio</a></li>
-                    <li><a href="#">Fale comigo</a></li>
+                    <li id="links"><a href="#apresentacao">Home</a></li>
+                    <li id="links"><a href="#container-about">Quem sou</a></li>
+                    <li id="links"><a href="#portfolio">Portifólio</a></li>
+                    <li id="links"><a href="#contact">Fale comigo</a></li>
+                    <li id="navbar-curriculo"><a href="https://drive.google.com/file/d/1-0-PvOgxYE7sBnMEn5igboX66-knmN1z/view?usp=sharing" target="_blank" class="btn-header">Currículo</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,58 +47,116 @@
             </a>
         </div>
     </aside>
-    <section>
-        <div class="description" id="apresentacao">
+    <section id="apresentacao">
             <div id="generate-description">
+                <br>
                 <h6>Olá, meu nome é</h6>
                 <br>
                 <h1>Thiago Calmon</h1>
                 <h6>Desenvolvedor Back-end | Node.js | Javascript | Typescript | MySQL | Google Cloud Plataform</h6>
-                <a href="#quem_sou" class="about_link">Saiba mais sobre mim</a>
+                <a href="#container-about" class="about_link">Saiba mais sobre mim</a>
             </div>
-        </div>
     </section>
-    <main>
-        <section>
-            <div id="container-about" >
-                <div id="quem_sou">
-                    <h1 id="point">QUEM SOU</h1>
-                <div class="container" id="about_me">
+    <section id="container-about">
                     <div id="about">
 				        <img src="img/perfil.jpg" alt="Perfil" class="foto_perfil"> 
-                        <p><span>Nome: </span>Thiago Calmon</p>
-				        <p><span>Atuação: </span> Desenvolvedor Back-end</p>
+                        <h3>Thiago Calmon</h3>
+				        <h3>Desenvolvedor Back-end</h3>
 			        </div>
 			        <div id="about_description">
+                        <p id="frase-about">Um pouco sobre mim:</p>
+                        <br>
                         <p>
-					        - Em 2020 a pandemia acelerou o processo de digitalização e migração dos serviços para o online. Esse fenômeno despertou o meu interesse em aprender a criação e funcionamento de sites, apps e outros produtos digitais. De forma autodidata procurei cursos no YouTube, ingressei na DevMedia.
-                        <br><br>- Atualmente focando em desenvolvimento com Javascript, TypeScript, AngularJS, NodeJS, MySQL e Google Cloud que servem para aplicações web.
-                        <br><br>- Estudando para aplicações futuras: JAVA e SpringBoot
-                        <br><br>- Idiomais: Inglês-Avançado
-                        <br><br>- Me considero consistente e adaptável para o aprendizado e aplicação em qualquer linguagem
+					    - Em 2020 a pandemia acelerou o processo de digitalização e migração dos serviços para o online. Esse fenômeno despertou o meu interesse em aprender a criação e funcionamento de sites, apps e outros produtos digitais. De forma autodidata procurei cursos no YouTube, ingressei na DevMedia.
+                        <br><br>
+                        - Atualmente focando em desenvolvimento com <span>Javascript</span> , <span>AngularJS</span> <span>NodeJS</span> , <span>MySQL</span> e <span>Google Cloud</span>,  para aplicações Web.
+                        <br><br>
+                        - Estudando para aplicações futuras: JAVA e SpringBoot
+                        <br><br>
+                        - Idiomais: Inglês-Avançado
+                        <br><br>
+                        - Me considero consistente e adaptável para o aprendizado e aplicação em qualquer linguagem
 				        </p>
 			        </div>
+        </section>
+        <section class="services" id="services">
+            <h2 class="frase-service">TECNOLOGIAS DO MEIO DIA-DIA</h2>
+            <div class="services-itens">
+                <div class="service-item">
+                    <div class="service-item-image">
+                        <img src="/img//javascript-logo-1.png" alt="">
+                    </div>
+                    <h3>JAVASCRIPT</h3>
+                    <p>Desenvolvo aplicação usando tanto o javascript puro, ou usando suas frameworks, como o Node.JS e Angular.JS</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-item-image">
+                        <img src="/img/java.jpg" alt="">
+                    </div>
+                    <h3>JAVA</h3>
+                    <p>Comecei os estudados no segundo semestre do ano de 2022 e desde então venho aprofundando os meus conhecimentos com JAVA, e sua framework SpringBooT</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-item-image">
+                        <img src="/img//javascript-logo-1.png" alt="">
+                    </div>
+                    <h3>HTML5/CSS3</h3>
+                    <p>Meus primeiros estudos na área de desenvolvimento, em 2020, foram aplicações usando HTML5 e o CSS3</p>
                 </div>
             </div>
         </section>
-        <section>
-            <div id="container-portifolio">
-                <div id="">
-                    <h1 id="point">PORTIFÓLIO</h1>
-                <div class="container" id="portifolio">
-                    <div id="about">
-				      
-			        </div>
-			        <div id="about_description">
-                       
-			        </div>
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-head">
+                <h3>Meus Principais Projetos</h3>
+                <p>Todos esses projetos estão disponíveis no meu github, para acessar, selecione o projeto que você deseja.</p>
+            </div>
+            <div class="portfolio-content">
+                <div class="col">
+                    <img src="img/bank.jpg" alt="">
+                    <div class="portfolio-content-text">
+                        <h3>Simulador de Empréstimo</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/call.jpg" alt="">
+                    <div class="portfolio-content-text">
+                        <h3>Chamada de vídeo</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/schooool.jpg" alt="">
+                    <div class="portfolio-content-text">
+                        <h3>Controle de alunos</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/temp.jpg" alt="">
+                    <div class="portfolio-content-text">
+                        <h3>Conversor de temperatura</h3>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
- 
-    </footer>
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h3>Fale Comigo</h3>
+                    <p>Para falar comigo, acesse alguma das minhas redes sociais ao lado, ou, responda o formulário abaixo que eu responderei o mais breve possível</p>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <input type="email" name="email" placeholder="Envie sua mensagem" required>
+                        <input type="submit" name="submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Todos os direitos reservados &copy; 2022</p>
+        </footer>
+    
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>
  
