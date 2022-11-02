@@ -23,6 +23,7 @@ a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
  
 body{
@@ -47,6 +48,13 @@ header{
     z-index: 5;
     opacity: 0.7;
 }
+
+header.sticky{
+    background: #025949;
+    padding: 5px 0;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
 
 section{
     padding-top: 100px;
@@ -149,6 +157,13 @@ header.sticky{
     display: flex;
     flex-direction: column;
     margin: 15px 20px;
+}
+
+#navbar-icon{
+    font-size: 25px;
+    color:#0E1626;
+    z-index: 11;
+    cursor: pointer;
 }
 
 .links {
@@ -389,7 +404,7 @@ header.sticky{
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
-    padding: 50px 80px;
+    padding: 50px 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -413,8 +428,8 @@ header.sticky{
 
 .form input[type="email"]{
     max-width: 100%;
-    width: 450px;
-    padding: 20px;
+    width: 300px;
+    padding: 15px;
     background: #0E1626;
     color: #05F2AF;
     border: none;
@@ -423,11 +438,11 @@ header.sticky{
 }
 
 .form input[type="submit"]{
-    padding: 20px;
+    padding: 15px;
     background: #0E1626;
     color: #05F2AF;
     border: none;
-    margin: 0 10px;
+    margin: 5px 10px;
     border-radius: 10px;
 }
 
@@ -438,6 +453,9 @@ header.sticky{
         padding-right: 20px;
         transition: .3s;
     }
+    aside{
+        display: none;
+    }
 }
 @media(max-width: 860px){
     #apresentacao{
@@ -445,12 +463,20 @@ header.sticky{
         min-height: 100vh;
         grid-gap: 1rem;
     }
+    aside{
+        display: none;
+    }
 }
 @media(max-width: 768px){
     #apresentacao{
         min-height: 80%;
     }
-    #header{
+
+    #navbar-icon{
+        display: block;
+    }
+
+    .navbar{
         position: absolute;
         top: -1000px;
         left: 0;
@@ -467,6 +493,12 @@ header.sticky{
     .navbar a:hover{
         color: #1F3140;
     }
+    .navbar a::after{
+        display: none;
+    }
+    .navbar.active{
+        top: 100%;
+    }
     .services-itens{
         grid-template-columns: 1fr;
     }
@@ -475,5 +507,8 @@ header.sticky{
     }
     #about_description{
         align-items:center;
+    }
+    aside{
+        display: none;
     }
 }
